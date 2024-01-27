@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Conditionals</title>
+</head>
+<body>
+  
+  <script>
+    // If...else statements
+    // By far the most common type of conditional statement you'll use if JavaScript -- the 'if...else statements'.
+
+    // Basic if...else syntax
+    let age = 18;
+
+    if (age > 18) {  // condition
+      console.log("You can drive.") // code to run if conditon is true
+    } else {
+      console.log("You can't drive") // run some other code istead
+    }
+
+    // This code is pretty human-readable - it is saying
+    // "if the condition returns true, run code A, else run code B"
+
+
+    // You should note that you don't have to include the 'else' and
+    // the second curly brace block - the following is also perfectly legal code:
+    if (age > 18) { // condition
+      console.log("You can drive.")// code to run if condition is true
+    }
+    // run some other code
+
+    // However, you need to be careful here -
+    // in this case, the second block of code is not controlled by the conditional statement,
+    // so it always runs, regardless of whether the condition returns 'true' or 'false'.
+
+
+
+    // else if
+    // There is a way to chain on extra choices/outcomes to your if...else - using 'else if'.
+    // Each extra choice requires an additional block to put between 'if () {} and else {}':
+
+    // Nesting if...else
+    // It is prefectly OK to put one if...else statement inside another one - to nest them.
+
+
+
+    // Logical operators: AND, OR and NOT
+    // If you want to test multiple conditions without writing nested 'if...else statements', logical operators can help you.
+    // When used in conditions, the first two do the following:
+
+    // 1. && - AND; allows you to chain together two or more expressions so that all of them have to individually evaluate to 'true' for whole expression to return 'true'.
+
+    // 2. || - OR; allows you to chain together two or more expressions so that one or more of then have to individually evaluate to 'true' for the whole expression to return 'true'.
+    let choice;
+
+    if (choice === "sunny" && temperature < 86) {
+      para.textContent = "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get the ice cream.";
+    } else if (choice === "sunny" && temperature >= 86) {
+      para.textContent = ""
+    }
+
+    // The first code block will only be run if 'choice === "sunny"' and temperature < 86 return 'true'.
+
+
+    // OR example
+
+    let iceCreanVanOutsice = true;
+
+    if (iceCreanVanOutsice || houseStatus === "on fire") {
+      console.log("You should leave the house quickly.");
+    } else {
+      console.log("Probably should just stay in then.");
+    }
+
+
+    // The last type of logical operator, NOT, expressed by the '!' operator,
+    // can be used to negate an expression.
+    // Let's combine it with OR :
+
+    if (!(iceCreanVanOutsice || houseStatus === "on fire")) {
+      console.log("Probably should just stay in then.");
+    } else {
+      console.log("You should leave the house quickly.");
+    }
+
+    // In this snippet, if the OR statement returns 'true', 
+    // the NOT operator will negate it so that the overall expression returns 'false'.
+
+    // You can combine as many logical statements together as you want,
+    // in whatever structure.
+
+  </script>
+</body>
+</html>
